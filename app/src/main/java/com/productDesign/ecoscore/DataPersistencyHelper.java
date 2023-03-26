@@ -20,12 +20,14 @@ public class DataPersistencyHelper {
         SharedPreferences.Editor editor = sp.edit();
         String json = new Gson().toJson(bills);
         editor.putString("Bills", json);
+        editor.putString("Name", User.Name);
         editor.commit();
     }
 
     public static List<Bill> loadData() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         String json = sp.getString("Bills", null);
+        User.Name = sp.getString("Name", "Gabriel");
         if(json !=null) {
             Type type = new TypeToken<List<Bill>>(){}.getType();
             List<Bill> bills = new Gson().fromJson(json, type);
