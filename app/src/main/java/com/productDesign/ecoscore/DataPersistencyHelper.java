@@ -28,12 +28,25 @@ public class DataPersistencyHelper {
         String json = sp.getString("Bills", null);
         if(json !=null) {
             Type type = new TypeToken<List<Bill>>(){}.getType();
-            return new Gson().fromJson(json, type);
+            List<Bill> bills = new Gson().fromJson(json, type);
+            if(bills.size()==0){
+                bills.add(new Bill("February", 310.4));
+                bills.add(new Bill("January", 505.7));
+                bills.add(new Bill("December", 289.2));
+                bills.add(new Bill("November", 352.3));
+                bills.add(new Bill("October", 378.5));
+                bills.add(new Bill("September", 458.5));
+            }
+            return bills;
         }
         else {
             List<Bill> bills = new ArrayList<>();
-            bills.add(new Bill("December", 321));
-            bills.add(new Bill("November", 489.5));
+            bills.add(new Bill("February", 310.4));
+            bills.add(new Bill("January", 505.7));
+            bills.add(new Bill("December", 289.2));
+            bills.add(new Bill("November", 352.3));
+            bills.add(new Bill("October", 378.5));
+            bills.add(new Bill("September", 458.5));
             return bills;
         }
     }
