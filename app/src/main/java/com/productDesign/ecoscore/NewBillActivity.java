@@ -32,7 +32,8 @@ public class NewBillActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText month = findViewById(R.id.inputMonth);
                 EditText consumption = findViewById(R.id.imputKwh);
-                Bill newBill = new Bill(month.getText().toString(), Double.parseDouble(consumption.getText().toString()));
+                String id = String.valueOf(System.currentTimeMillis());
+                Bill newBill = new Bill(month.getText().toString(), Double.parseDouble(consumption.getText().toString()), id);
                 Intent intent = new Intent();
                 intent.putExtra("Bill", newBill);
                 setResult(1,intent);

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "385417861917",
+    "project_id": "ecoscore-a3b66",
+    "storage_bucket": "ecoscore-a3b66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385417861917:android:14cfe6eb267c0a6b415ff4",
+        "android_client_info": {
+          "package_name": "com.productDesign.ecoscore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385417861917-vq9rvp128lhmp5m6050uj6086lrg6odl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.productDesign.ecoscore",
+            "certificate_hash": "8f160787097fd7d59bc13165a48554f1284e7f8f"
+          }
+        },
+        {
+          "client_id": "385417861917-bregl99g63a5088msa5baicvt8r33vn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh20VOVNEuol9erLBYumiC_5wj-Dp1S6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385417861917-bregl99g63a5088msa5baicvt8r33vn3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

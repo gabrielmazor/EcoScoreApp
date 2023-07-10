@@ -4,18 +4,21 @@ import java.io.Serializable;
 
 public class Bill implements Serializable {
 
-    private String Month;
-    private double Consumption;
-    private double Ratio;
+    public String Month;
+    public double Consumption;
+    public double Ratio;
     public static double Mean = 489.5;
     public static double Std = 122.3;
-    private double Co2;
-    private double Precentage;
+    public double Co2;
+    public double Precentage;
+    public String documentId;
 
-    public Bill(String month, double consumption) {
+    public Bill(){}
+    public Bill(String month, double consumption, String id) {
         Consumption = consumption;
         Month = month;
         Ratio = 0.553;
+        documentId = id;
         Co2 = consumption * Ratio;
         double z = (Consumption-Mean) / Std;
         Precentage = 100 * (1-calculateCumulativeProbability(z));
@@ -50,6 +53,12 @@ public class Bill implements Serializable {
     public double getPrecentage(){
         return Precentage;
     }
+    public String getDocumentId() {
+        return documentId;
+    }
 
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
+    }
 
 }
